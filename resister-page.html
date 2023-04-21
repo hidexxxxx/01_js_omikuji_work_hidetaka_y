@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resister-page.css">
+    <title>事前転職相談サービス BiBi</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header">B<span class="char-i">i</span>B<span class="char-i">i</span></h1>
+    </header>
+
+    <main>
+
+        <form>
+            <div class="nickname">
+                <label for="nickname">ニックネーム</label>
+                <input type="text" name="nickname" required>
+            </div>
+            <div class="gender">
+                <label for="gender">性別</label>
+                <input type="radio" name="gender" value="female">
+                <label for="female">女性</label>
+                <input type="radio" name="gender" value="male">
+                <label for="male">男性</label>
+            </div>
+            <div class="age">
+                <label for="age">年齢</label>
+                <input type="text" name="age" required>
+                <p>　歳</p>
+            </div>
+            <div class="industory">
+                <label for="industry">経験した業界</label>
+                <select name="industry">
+                    <option value="automotive">自動車</option>
+                    <option value="house">住宅</option>
+                    <option value="it">IT</option>
+                    <option value="finance">金融</option>
+                    <option value="insurance">保険</option>
+                </select>
+            </div>
+            <div class="job">
+                <label for="job">経験した職種</label>
+                <select name="job">
+                    <option value="design">設計</option>
+                    <option value="development">開発</option>
+                    <option value="sales">営業</option>
+                    <option value="planning">企画</option>
+                    <option value="accounting">経理</option>
+                </select>
+            </div>
+            <div class="resister-button">
+                <button type="button" name="登録" onclick="location.href='select-consultation-page.html';">登録　▼</button>
+            </div>
+        </form>
+
+    </main>
+
+</body>
+
+<footer>
+    <div class="footer-details">
+        <button type="" class="first">初めての方へ</button>
+        <button type="" class="question">よくある質問</button>
+        <button type="" class="use">利用規約</button>
+        <button type="" class="dealrule">特定商品取引法</button>
+        <button type="" class="privacy">プライバシーポリシー</button>
+        <button type="" class="footer-contact">お問い合わせ</button>
+        <button type="" class="company-outline">会社概要</button>
+    </div>
+    <h5 class="copy-rights">©️2023 XXX Co,.Ltd. All Rights Reserved</h5>
+</footer>
+
+</html>

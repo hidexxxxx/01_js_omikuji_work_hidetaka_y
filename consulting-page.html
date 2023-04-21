@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="consulting-page.css">
+    <title>事前転職相談サービス BiBi</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header">B<span class="char-i">i</span>B<span class="char-i">i</span></h1>
+    </header>
+
+    <main>
+        <div class="next-question">
+            <button type="button" id="next-question">次の質問</button>
+        </div>
+        <div class="question-contents">
+            <p id="question-contents"></p>
+        </div>
+
+        <div class="answer">
+            <label class="label-answer" for="answer">回答欄</label>
+            <textarea class="answer" name="text" rows="10"></textarea>
+        </div>
+
+        <div class="send-messege">
+            <button type="button" name="send-messege"
+                onclick="location.href='select-consultation-page.html';">送信　▽</button>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+
+            //question contents//
+            const brian = "Brianさんの質問：仕事内容について詳しく教えてください。";
+            const jiro = "Jiroさんの質問：業務でやり取りが発生する会社はどんな会社ですか？";
+            const mick = "Mickさんの質問：転勤はありますか？";
+            const mike = "Mikeさんの質問：残業時間は月どれくらいありますか？";
+            const yusuke = "Yusukeさんの質問：ワークライフバランスは整っていますか？";
+
+            //ボタン押した時の処理//
+            $("#next-question").on("click", function () {
+                const min = 0;
+                const max = 4;
+                const random = Math.floor(Math.random() * (max - min + 1)) + min;
+
+                if (random === 0) {
+                    $("#question-contents").html(brian);
+                } else if (random === 1) {
+                    $("#question-contents").html(jiro);
+                } else if (random === 2) {
+                    $("#question-contents").html(mick);
+                } else if (random === 3) {
+                    $("#question-contents").html(mike);
+                } else if (random === 4) {
+                    $("#question-contents").html(yusuke);
+                }
+            });
+
+        </script>
+
+    </main>
+
+</body>
+
+<footer>
+    <div class="footer-details">
+        <button type="" class="first">初めての方へ</button>
+        <button type="" class="question">よくある質問</button>
+        <button type="" class="use">利用規約</button>
+        <button type="" class="dealrule">特定商品取引法</button>
+        <button type="" class="privacy">プライバシーポリシー</button>
+        <button type="" class="footer-contact">お問い合わせ</button>
+        <button type="" class="company-outline">会社概要</button>
+    </div>
+    <h5 class="copy-rights">©️2023 XXX Co,.Ltd. All Rights Reserved</h5>
+</footer>
+
+</html>
