@@ -34,30 +34,20 @@ main {
     background-color: white;
 }
 
-.login {
-    font-size: 41px;
-    margin-left: 40%;
-    padding-bottom: 20px;
+.text-area {
+    margin-left: 25%;
 }
 
-.form-mail,
-.form-password {
-    margin-left: 40%;
+.label-ask-title,
+.label-ask-things {
+    font-size: 20px;
 }
 
-input[type="email"],
-input[type="password"] {
-    font-size: 30px;
-    width: 400px;
-    position: center;
-    margin-left: 40%;
-}
-
-.resister {
-    position: absolute;
-    top: 32%;
-    right: -18%;
-    margin-right: 20%;
+.text-ask-title,
+.text-ask-things {
+    font-size: 20px;
+    width: 60%;
+    padding-top: 5px;
 }
 
 button[type="button"] {
@@ -66,12 +56,8 @@ button[type="button"] {
     width: 250px;
     height: 40px;
     color: black;
-    /* background-color: rgb(255, 221, 217); */
+    margin-top: 20px;
     margin-left: 40%;
-}
-
-.resister,
-.login {
     cursor: pointer;
 }
 

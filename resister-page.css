@@ -18,6 +18,14 @@ header {
     padding-bottom: 0px;
 }
 
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .char-i {
     color: white;
 }
@@ -31,7 +39,6 @@ form {
     padding-top: 40px;
 }
 
-/* 3つの要素を包含する親要素に、flexboxを適用 */
 .form-container {
     display: flex;
 }
@@ -41,19 +48,34 @@ form {
 .age,
 .industory,
 .job {
+    font-size: 30px;
     display: flex;
     justify-content: left;
-    /* 要素を左に均等に配置 */
     align-items: center;
-    /* 垂直方向に中央揃え */
     margin-left: 20%;
     margin-right: 20%;
     padding-top: 30px;
 }
 
-/* ラベル要素の幅を指定 */
 label {
     width: 200px;
+    margin-right: 100px;
+}
+
+select {
+    font-size: 25px;
+}
+
+input {
+    font-size: 25px;
+}
+
+.nickname,
+.gender,
+.age,
+.industory,
+.job {
+    margin-left: 36%;
 }
 
 button[type="button"] {
@@ -62,8 +84,7 @@ button[type="button"] {
     width: 250px;
     height: 40px;
     color: black;
-    background-color: rgb(255, 221, 217);
-    margin-left: 40%;
+    margin-left: 43%;
 }
 
 .resister-button {

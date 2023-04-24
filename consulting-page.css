@@ -18,17 +18,20 @@ header {
     padding-bottom: 0px;
 }
 
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .char-i {
     color: white;
 }
 
 main {
     background-color: white;
-}
-
-label {
-    display: flex;
-    justify-content: left;
 }
 
 .next-question {
@@ -46,29 +49,22 @@ button[type="button"] {
     width: 250px;
     height: 40px;
     color: black;
-    background-color: rgb(255, 221, 217);
+    /* background-color: rgb(255, 221, 217); */
     margin-left: 40%;
+    cursor: pointer;
 }
 
 .answer {
-    font-size: 15px;
+    font-size: 20px;
     width: 80%;
     padding-left: 10%;
     padding-right: 10%;
+    padding-bottom: 20px;
 }
 
-button[type="button"] {
-    font: bold;
-    font-size: 25px;
-    width: 250px;
-    height: 40px;
-    color: black;
-    background-color: rgb(255, 221, 217);
-    margin-left: 40%;
-}
-
-.send-messege {
-    padding-top: 20px;
+.question-contents {
+    font-size: 27px;
+    margin-left: 27%;
 }
 
 .footer-details {

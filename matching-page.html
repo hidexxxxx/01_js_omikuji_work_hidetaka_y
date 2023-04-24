@@ -10,22 +10,110 @@
 
 <body>
     <header>
-        <h1 class="header">B<span class="char-i">i</span>B<span class="char-i">i</span></h1>
+        <h1 class="header"><a href="index.html">B<span class="char-i">i</span>B<span class="char-i">i</span></a></h1>
     </header>
 
     <main>
 
+        <div class="adviser-select">
+            <button type="button" name="adviser-select-p" id="adviser-select-p"
+                class="adviser-select-p">相談したい相手　▽</button>
+        </div>
 
+        <div class="adviser-specs">
+            <p id="adviser-specs"></p>
+        </div>
 
+        <div class="to-chatting-page">
+            <button type="button" name="to-chatting-page-p" id="to-chatting-page-p" class="to-chatting-page-p"
+                onclick="location.href = 'ask-consulting-page.html';">相談内容記入ページ　▽</button>
+        </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
 
+            //adviser contents//
+            const brian = `<div class="brian">
+                            <ul>
+                                <li>ニックネーム　：　Brian</li>
+                                <li>性別　：　男</li>
+                                <li>年齢　：　36歳</li>
+                                <li>業界　：　自動車</li>
+                                <li>業種　：　設計</li>
+                            </ul>
+                            <ul>
+                                <li><img class="brians-photo" src="img/brian.jpeg" alt="brian's image" /></li>
+                            </ul>
+                        </div>`;
+            const jiro = `<div class="jiro">
+                            <ul>
+                                <li>ニックネーム　：　Jiro</li>
+                                <li>性別　：　男</li>
+                                <li>年齢　：　27歳</li>
+                                <li>業界　：　住宅</li>
+                                <li>業種　：　開発</li>
+                            </ul>
+                            <ul>
+                                <li><img class="jiros-photo" src="img/jiro.jpeg" alt="jiro's image" /></li>
+                            </ul>
+                        </div>`;
+            const mick = `<div class="mick">
+                            <ul>
+                                <li>ニックネーム　：　Mick</li>
+                                <li>性別　：　男</li>
+                                <li>年齢　：　34歳</li>
+                                <li>業界　：　IT</li>
+                                <li>業種　：　営業</li>
+                            </ul>
+                            <ul>
+                                <li><img class="micks-photo" src="img/mick.jpeg" alt="mick's image" /></li>
+                            </ul>
+                        </div>`;
+            const mike = `<div class="mike">
+                            <ul>
+                                <li>ニックネーム　：　Mike</li>
+                                <li>性別　：　男</li>
+                                <li>年齢　：　24歳</li>
+                                <li>業界　：　金融</li>
+                                <li>業種　：　企画</li>
+                            </ul>
+                            <ul>
+                                <li><img class="mikes-photo" src="img/mike.jpeg" alt="mike's image" /></li>
+                            </ul>
+                        </div>`;
+            const yusuke = `<div class="yusuke">
+                            <ul>
+                                <li>ニックネーム　：　Yusuke</li>
+                                <li>性別　：　男</li>
+                                <li>年齢　：　32歳</li>
+                                <li>業界　：　保険</li>
+                                <li>業種　：　経理</li>
+                            </ul>
+                            <ul>
+                                <li><img class="yusuke-photo" src="img/yusuke.jpeg" alt="yusuke's image" /></li>
+                            </ul>
+                        </div>`;
 
+            //ボタン押した時の処理//
+            $("#adviser-select-p").on("click", function () {
+                const min = 0;
+                const max = 4;
+                const random = Math.floor(Math.random() * (max - min + 1)) + min;
 
+                if (random === 0) {
+                    $("#adviser-specs").html(brian);
+                } else if (random === 1) {
+                    $("#adviser-specs").html(jiro);
+                } else if (random === 2) {
+                    $("#adviser-specs").html(mick);
+                } else if (random === 3) {
+                    $("#adviser-specs").html(mike);
+                } else if (random === 4) {
+                    $("#adviser-specs").html(yusuke);
+                }
+            });
 
-
-
-
-
+        </script>
 
     </main>
 
