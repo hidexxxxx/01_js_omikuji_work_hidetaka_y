@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="ask-consulting-page.css">
     <title>事前転職相談サービス BiBi</title>
 </head>
 
@@ -14,25 +14,22 @@
     </header>
 
     <main>
+        <div class="text-area">
+            <div class="ask-title">
+                <p class="label-ask-title" id="text-ask-title">相談したい事　▼　</p>
+                <textarea class="text-ask-title" name="text" rows="1"></textarea>
+            </div>
+            <br>
+            <div class="ask-things">
+                <p class="label-ask-things" id="text-ask-things">詳細な相談内容　▼</p>
+                <textarea class="text-ask-things" name="text" rows="10"></textarea>
+            </div>
+        </div>
 
-        <br>
-        <button type="button" id="resister" class="resister"
-            onclick="location.href = 'resister-page.html';">未登録の方　▶︎</button>
-        <P class="login">Login</P>
-        <div>
-            <h2 class="form-mail">メールアドレス：</h2>
-            <input type="email" id="email" name="email" required>
+        <div class="send-messege">
+            <button type="button" name="send-messege" class="send-messege"
+                onclick="location.href='review-page.html';">送信　▽</button>
         </div>
-        <div>
-            <h2 class="form-password">パスワード：</h2>
-            <input type="password" id="password" name="password" requered>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <button type="button" id="login" class="login"
-            onclick="location.href = 'select-consultation-page.html';">ログイン　✔︎</button>
 
     </main>
 

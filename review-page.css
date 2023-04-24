@@ -18,6 +18,14 @@ header {
     padding-bottom: 0px;
 }
 
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .char-i {
     color: white;
 }
@@ -26,11 +34,79 @@ main {
     background-color: white;
 }
 
+.paragraph {
+    font-size: 30px;
+    padding-top: 20px;
+    margin-left: 33%;
+}
 
+.rate-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 40%;
+    padding-top: 20px;
+}
 
+.rate-form input[type=radio] {
+    display: none;
+}
 
+.rate-form label {
+    position: relative;
+    padding: 0 5px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 35px;
+}
 
+.rate-form label:hover {
+    color: #ffcc00;
+}
 
+.rate-form label:hover~label {
+    color: #ffcc00;
+}
+
+.rate-form input[type=radio]:checked~label {
+    color: #ffcc00;
+}
+
+.good-or-bad-things {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.good-things,
+.bad-things,
+.good-things-li,
+.bad-things-li {
+    list-style: none;
+    font-size: 25px;
+}
+
+.good-things {
+    text-decoration: underline double;
+    text-decoration-color: rgb(254, 47, 51);
+}
+
+.bad-things {
+    text-decoration: underline double;
+    text-decoration-color: rgb(58, 123, 255);
+}
+
+button[type="button"] {
+    font: bold;
+    font-size: 25px;
+    width: 250px;
+    height: 40px;
+    color: black;
+    margin-top: 50px;
+    margin-left: 40%;
+    cursor: pointer;
+}
 
 
 .footer-details {

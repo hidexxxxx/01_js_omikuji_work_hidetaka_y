@@ -10,19 +10,50 @@
 
 <body>
     <header>
-        <h1 class="header">B<span class="char-i">i</span>B<span class="char-i">i</span></h1>
+        <h1 class="header"><a href="index.html">B<span class="char-i">i</span>B<span class="char-i">i</span></a></h1>
     </header>
 
     <main>
+        <p class="paragraph">相談して悩みは軽減されましたか？</p>
 
+        <div class="rate-form">
+            <input id="star5" type="radio" name="rate" value="5">
+            <label for="star5">★</label>
+            <input id="star4" type="radio" name="rate" value="4">
+            <label for="star4">★</label>
+            <input id="star3" type="radio" name="rate" value="3">
+            <label for="star3">★</label>
+            <input id="star2" type="radio" name="rate" value="2">
+            <label for="star2">★</label>
+            <input id="star1" type="radio" name="rate" value="1">
+            <label for="star1">★</label>
+        </div>
 
+        <div class="good-or-bad-things">
+            <div>
+                <p class="good-things">良かった点(good)を選択</p>
+                <div class="good-things-li">
+                    <li><input type="checkbox" name="good" value="1">親切なやりとり</li>
+                    <li><input type="checkbox" name="good" value="2">とても役に立った</li>
+                    <li><input type="checkbox" name="good" value="3">返信が早い</li>
+                    <li><input type="checkbox" name="good" value="4">他では得られない情報が得られた</li>
+                </div>
+            </div>
+            <div>
+                <p class="bad-things">改善して欲しい点(bad)を選択</p>
+                <div class="bad-things-li">
+                    <li><input type="checkbox" name="bad" value="1">コミュニケーション不足</li>
+                    <li><input type="checkbox" name="bad" value="2">役にたつアドバイスが貰えなかった</li>
+                    <li><input type="checkbox" name="bad" value="3">不快な思いをした</li>
+                    <li><input type="checkbox" name="bad" value="4">雑な文章だった</li>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-
+        <div class="send-messege">
+            <button type="button" name="send-messege" class="send-messege"
+                onclick="location.href='review-page.html';">送信　▽</button>
+        </div>
 
 
 

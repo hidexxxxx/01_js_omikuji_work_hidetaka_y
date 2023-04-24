@@ -18,6 +18,14 @@ header {
     padding-bottom: 0px;
 }
 
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
 .char-i {
     color: white;
 }
@@ -26,12 +34,49 @@ main {
     background-color: white;
 }
 
+ul {
+    list-style-type: none;
+}
 
+.adviser-select,
+.to-chatting-page {
+    margin-left: 40%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
 
+.adviser-select-p,
+.to-chatting-page-p {
+    font: bold;
+    font-size: 25px;
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+}
 
+.adviser-specs {
+    font-size: 30px;
+}
 
+.brian,
+.jiro,
+.mick,
+.mike,
+.yusuke {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
 
-
+.brians-photo,
+.jiros-photo,
+.micks-photo,
+.mikes-photo,
+.yusuke-photo {
+    width: 300px;
+    height: auto;
+    box-shadow: 1.5px 1.5px #333;
+}
 
 .footer-details {
     display: flex;
