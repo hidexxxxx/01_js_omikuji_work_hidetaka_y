@@ -46,10 +46,9 @@ main {
 button[type="button"] {
     font: bold;
     font-size: 25px;
-    width: 250px;
+    width: 300px;
     height: 40px;
     color: black;
-    /* background-color: rgb(255, 221, 217); */
     margin-left: 40%;
     cursor: pointer;
 }

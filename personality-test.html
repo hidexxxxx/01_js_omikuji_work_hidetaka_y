@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="personality-test.css">
+    <title>事前転職相談サービス BiBi</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header"><a href="index.html">B<span class="char-i">i</span>B<span class="char-i">i</span></a></h1>
+    </header>
+
+    <main>
+        <div class="choose_box">
+            <!-- 質問一覧 -->
+            <div class="app-theme">
+                <p>ぱっぱ画面が変わる性格診断アプリ(全5問)</p>
+            </div>
+            <!-- 質問1 -->
+            <div id="q_01" class="fit">
+                <br>
+                <p>質問1: あなたは普段　</p>
+                <ul>
+                    <li><a class="btn" href="#q_02" data-value="a">話すペースが速い</a></li>
+                    <li><a class="btn" href="#q_02" data-value="b">話すペースがゆっくり</a></li>
+                </ul>
+            </div>
+
+            <!-- 質問2 -->
+            <div id="q_02" style="display: none;">
+                <br>
+                <p>質問2:　あなたは普段、相手との会話で</p>
+                <ul>
+                    <li><a class="btn" href="#q_03" data-value="a">間をとらずに話す</a></li>
+                    <li><a class="btn" href="#q_03" data-value="b">間をとりながら話す</a></li>
+                </ul>
+            </div>
+
+            <!-- 質問3 -->
+            <div id="q_03" style="display: none;">
+                <br>
+                <p>質問3:　あなたの話し方は</p>
+                <ul>
+                    <li><a class="btn" href="#q_04" data-value="a">語尾がキッパリ</a></li>
+                    <li><a class="btn" href="#q_04" data-value="b">語尾がソフト</a></li>
+                </ul>
+            </div>
+
+            <!-- 質問4 -->
+            <div id="q_04" style="display: none;">
+                <br>
+                <p>質問4:　あなたは普段声が</p>
+                <ul>
+                    <li><a class="btn" href="#q_05" data-value="a">大きめ</a></li>
+                    <li><a class="btn" href="#q_05" data-value="b">小さめ</a></li>
+                </ul>
+            </div>
+
+            <!-- 質問5 -->
+            <div id="q_05" style="display: none;">
+                <br>
+                <p>質問5:　意見を求められた時、あなたは</p>
+                <ul>
+                    <li><a class="btn end" data-value="a">自分から口火を切る</a></li>
+                    <li><a class="btn end" data-value="b">後から発言する</a></li>
+                </ul>
+            </div>
+
+
+
+            <!-- ここから以下回答 -->
+            <!-- 回答の答え1 -->
+            <div id="answer_01" class="result" style="display: none;">
+                <div class="result_theme ">
+                    <p>あなたの性格は</p>
+                </div>
+                <div class="result_type0 ">
+                    <h4>『イケイケどんどん』タイプ</h4>
+                </div>
+                <div class="result_discription0">
+                    <h2>めっちゃ自己主張 × めっちゃスピーディ</h2>
+                    <p>
+                        　あなたは自己主張強いのでリーダーに向いています。今すぐリーダーになろう。
+                    </p>
+                </div>
+                <div class="return-btn">
+                    <a class="return" href="index.html">TOP　▽</a>
+                </div>
+            </div>
+
+
+
+            <!-- 回答の答え2 -->
+            <div id="answer_02" style="display: none;">
+                <div class="result_theme ">
+                    <p>あなたの性格は</p>
+                </div>
+                <div class="result_type1 ">
+                    <h4>『まろやか』タイプ</h4>
+                </div>
+                <div class="result_discription1">
+                    <h2>周りを立てる人 × じっくり考える人</h2>
+                    <p>
+                        　あなたは物事をじっくり考えて、最善策を練ることが得意。組織や周りを支えることが得意。
+                    </p>
+                </div>
+                <div class="return-btn">
+                    <a class="return" href="index.html">TOP　▽</a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+
+        <script>
+            //ボタンを押すごとに画面が切り替わる関数
+            $(function () {
+
+                $(".btn").on("click", function () {
+                    $(this).closest("div").css("display", "none");
+                    id = $(this).attr("href");
+                    $(id).addClass("fit").fadeIn("slow").show();
+                });
+
+
+
+                //選択ボタンデータを配列に入れてカウントする関数
+                var countA;
+                var countB;
+                var box = [];
+                $(".btn").each(function () {
+                    $(this).on('click', function () {
+                        var value = $(this).data("value");
+                        box.push(value);
+
+                        countA = box.filter(function (x) {
+                            return x === "a"
+                        }).length;
+                        countB = box.filter(function (y) {
+                            return y === "b"
+                        }).length;
+                    });
+                });
+
+
+                //結果を出力する関数
+                $('.end').on('click', function () {
+                    if (countA > countB) {
+                        $('#answer_01').css("display", ""); //回答1
+                    } else {
+                        $('#answer_02').css("display", "");//回答2
+                    }
+                });
+
+            });
+        </script>
+
+
+
+    </main>
+
+</body>
+
+<footer>
+    <div class="footer-details">
+        <button type="" class="first">初めての方へ</button>
+        <button type="" class="question">よくある質問</button>
+        <button type="" class="use">利用規約</button>
+        <button type="" class="dealrule">特定商品取引法</button>
+        <button type="" class="privacy">プライバシーポリシー</button>
+        <button type="" class="footer-contact">お問い合わせ</button>
+        <button type="" class="company-outline">会社概要</button>
+    </div>
+    <h5 class="copy-rights">©️2023 XXX Co,.Ltd. All Rights Reserved</h5>
+</footer>
+
+</html>

@@ -15,7 +15,7 @@
 
     <main>
         <div class="next-question">
-            <button type="button" id="next-question">次の質問　▽</button>
+            <button type="button" id="next-question">答えて欲しい質問　▽</button>
         </div>
         <div class="question-contents">
             <p id="question-contents"></p>
@@ -35,11 +35,42 @@
         <script>
 
             //question contents//
-            const brian = "Brianさんの質問：仕事内容について詳しく教えてください。";
-            const jiro = "Jiroさんの質問：業務でやり取りが発生する会社はどんな会社ですか？";
-            const mick = "Mickさんの質問：転勤はありますか？";
-            const mike = "Mikeさんの質問：残業時間は月どれくらいありますか？";
-            const yusuke = "Yusukeさんの質問：ワークライフバランスは整っていますか？";
+
+            const brian = ` <ul>
+                            <li>ニックネーム　：　Brian</li>
+                            <li>性別　：　男</li>
+                            <li>業種　：　自動車</li>
+                            <li>職種　：　設計</li>
+                            <li>Brianさんの質問　：　仕事内容について詳しく教えてください。</li>
+                            </ul>`
+            const jiro = ` <ul>
+                            <li>ニックネーム　：　Jiro</li>
+                            <li>性別　：　男</li>
+                            <li>業種　：　住宅</li>
+                            <li>職種　：　開発</li>
+                            <li>Brianさんの質問　：　業務でやり取りが発生する会社はどんな会社ですか？</li>
+                            </ul>`
+            const mick = ` <ul>
+                            <li>ニックネーム　：　Jiro</li>
+                            <li>性別　：　男</li>
+                            <li>業種　：　IT</li>
+                            <li>職種　：　営業</li>
+                            <li>Brianさんの質問　：　転勤はありますか？</li>
+                            </ul>`
+            const mike = ` <ul>
+                            <li>ニックネーム　：　Mike</li>
+                            <li>性別　：　男</li>
+                            <li>業種　：　金融</li>
+                            <li>職種　：　企画</li>
+                            <li>Brianさんの質問　：　残業時間は月どれくらいありますか？</li>
+                            </ul>`
+            const yusuke = ` <ul>
+                            <li>ニックネーム　：　Yusuke</li>
+                            <li>性別　：　男</li>
+                            <li>業種　：　保険</li>
+                            <li>職種　：　経理</li>
+                            <li>Brianさんの質問　：　ワークライフバランスは整っていますか？</li>
+                            </ul>`
 
             //ボタン押した時の処理//
             $("#next-question").on("click", function () {
