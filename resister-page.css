@@ -18,6 +18,13 @@ header {
     padding-bottom: 0px;
 }
 
+.personality-test {
+    position: absolute;
+    top: 30%;
+    right: -18%;
+    margin-right: 20%;
+}
+
 .header a:link,
 .header a:visited,
 .header a:hover,
